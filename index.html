@@ -206,5 +206,289 @@ function bookTable(e){
   window.open(`https://wa.me{WA}?text=${encodeURIComponent(msg)}`);
 }
 </script>
+</body><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABC Cafe | Artisan Coffee & Lounge - Nigdi, Pune</title>
+<link href="https://googleapis.com" rel="stylesheet">
+<link rel="stylesheet" href="https://cloudflare.com">
+<style>
+:root{--bg:#FAF7F2;--card:#FFFFFF;--text:#231710;--muted:#6E5D53;--pri:#8B5A2B;--pri-dark:#633E1B;--acc:#2E5A44;--bdr:#E8DFD5;--shd:0 10px 25px rgba(35,23,16,0.08)}
+[data-theme="dark"]{--bg:#14100E;--card:#1F1916;--text:#F5EFEA;--muted:#A89B92;--pri:#D4955E;--pri-dark:#B37743;--acc:#488B6A;--bdr:#332A25;--shd:0 10px 25px rgba(0,0,0,0.4)}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);transition:.3s;line-height:1.6}
+h1,h2,h3,h4{font-family:'Playfair Display',serif}
+.top-bar{background:var(--acc);color:#fff;text-align:center;padding:8px 5%;font-size:.82rem;display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+.dot{height:9px;width:9px;background:#4ADE80;border-radius:50%;display:inline-block;margin-right:5px}
+nav{position:sticky;top:0;z-index:99;background:var(--card);padding:14px 6%;display:flex;justify-content:space-between;align-items:center;box-shadow:var(--shd);border-bottom:1px solid var(--bdr)}
+.logo{font-size:1.5rem;font-weight:700;color:var(--pri);text-decoration:none;display:flex;align-items:center;gap:8px}
+.nav-links{display:flex;gap:20px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--text);font-size:.9rem;font-weight:500}
+.nav-links a:hover{color:var(--pri)}
+.nav-btns{display:flex;gap:10px;align-items:center}
+.btn{background:var(--pri);color:#fff;padding:10px 20px;border-radius:30px;border:none;cursor:pointer;text-decoration:none;font-size:.88rem;font-weight:500;transition:.25s;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.btn:hover{background:var(--pri-dark);transform:translateY(-2px)}
+.btn-out{background:transparent;border:1.5px solid var(--pri);color:var(--pri)}
+.btn-out:hover{background:var(--pri);color:#fff}
+.icon-btn{background:none;border:1px solid var(--bdr);color:var(--text);padding:8px 11px;border-radius:50%;cursor:pointer;position:relative}
+.badge{position:absolute;top:-5px;right:-5px;background:var(--pri);color:#fff;font-size:.7rem;font-weight:700;padding:2px 6px;border-radius:50%}
+.hero{height:82vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),url('https://unsplash.com') center/cover;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff;padding:20px}
+.hero h1{font-size:3.2rem;margin-bottom:12px}
+.hero p{max-width:620px;margin-bottom:25px;color:#EAE0D5;font-size:1.05rem}
+section{padding:65px 6%}
+.alt{background:rgba(139,90,43,0.04)}
+.title{text-align:center;margin-bottom:40px}
+.title h2{font-size:2.3rem;color:var(--pri);margin-bottom:6px}
+.title p{color:var(--muted);font-size:.95rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:22px;box-shadow:var(--shd);transition:.3s}
+.card:hover{transform:translateY(-4px)}
+.menu-card img{width:100%;height:180px;object-fit:cover;border-radius:12px;margin-bottom:14px}
+.tag{font-size:.72rem;padding:3px 8px;border-radius:6px;background:#DCFCE7;color:#166534;font-weight:600}
+.filters{display:flex;justify-content:center;gap:10px;margin-bottom:30px;flex-wrap:wrap}
+.f-btn{padding:8px 18px;border-radius:25px;border:1px solid var(--bdr);background:var(--card);color:var(--text);cursor:pointer;font-weight:500}
+.f-btn.active,.f-btn:hover{background:var(--pri);color:#fff;border-color:var(--pri)}
+select,input{width:100%;padding:11px;margin-top:6px;border-radius:10px;border:1px solid var(--bdr);background:var(--bg);color:var(--text);font-family:inherit}
+.drawer{position:fixed;top:0;right:-380px;width:100%;max-width:360px;height:100%;background:var(--card);z-index:999;padding:22px;transition:.3s;display:flex;flex-direction:column;box-shadow:-5px 0 25px rgba(0,0,0,.35)}
+.drawer.open{right:0}
+.wa-float{position:fixed;bottom:22px;right:22px;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;justify-content:center;align-items:center;font-size:1.8rem;text-decoration:none;z-index:90;box-shadow:0 4px 15px rgba(0,0,0,.3)}
+footer{background:#1A120E;color:#EAE0D5;text-align:center;padding:40px 5% 20px}
+@media(max-width:768px){.nav-links{display:none}.hero h1{font-size:2.3rem}}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <span><span class="dot"></span> <strong>Live Status:</strong> Seats Available for Work & Family</span>
+  <span><i class="fas fa-clock"></i> Open: 8:00 AM – 11:00 PM</span>
+  <span><i class="fas fa-map-marker-alt"></i> Yamuna Nagar, Nigdi, Pune</span>
+</div>
+
+<nav>
+  <a href="#" class="logo"><i class="fas fa-mug-hot"></i> ABC Cafe</a>
+  <ul class="nav-links">
+    <li><a href="#vibe">Our Vibe</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#custom">Custom Coffee</a></li>
+    <li><a href="#events">Events & Gifts</a></li>
+    <li><a href="#book">Visit & Book</a></li>
+  </ul>
+  <div class="nav-btns">
+    <button class="icon-btn" onclick="toggleTheme()" title="Dark Mode"><i class="fas fa-moon"></i></button>
+    <button class="icon-btn" onclick="toggleCart()" title="Order Bag"><i class="fas fa-shopping-bag"></i><span class="badge" id="cnt">0</span></button>
+    <a href="#book" class="btn">Reserve</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>Sip, Relax & Unwind at ABC Cafe</h1>
+  <p>Your cozy neighborhood sanctuary near Pavale Ground, Yamuna Nagar, Nigdi. Handcrafted coffee, artisan bites, free Wi-Fi & pet-friendly vibes.</p>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+    <a href="#menu" class="btn">Order Online</a>
+    <a href="#book" class="btn btn-out" style="color:#fff;border-color:#fff">Book a Table</a>
+  </div>
+</header>
+<section id="vibe">
+  <div class="title">
+    <h2>Why Nigdi Loves ABC Cafe</h2>
+    <p>Designed for students, families, coffee lovers, and remote workers in PCMC</p>
+  </div>
+  <div class="grid" style="text-align:center">
+    <div class="card"><i class="fas fa-wifi fa-2x" style="color:var(--pri);margin-bottom:12px"></i><h3>Free High-Speed Wi-Fi</h3><p style="color:var(--muted);font-size:.9rem">Charging points at every corner table for seamless remote work.</p></div>
+    <div class="card"><i class="fas fa-paw fa-2x" style="color:var(--pri);margin-bottom:12px"></i><h3>Pet-Friendly Patio</h3><p style="color:var(--muted);font-size:.9rem">Bring your furry friends along to our comfortable outdoor seating.</p></div>
+    <div class="card"><i class="fas fa-chess fa-2x" style="color:var(--pri);margin-bottom:12px"></i><h3>Board Games & Books</h3><p style="color:var(--muted);font-size:.9rem">Unplug with friends over classic board games or a good novel.</p></div>
+    <div class="card"><i class="fas fa-motorcycle fa-2x" style="color:var(--pri);margin-bottom:12px"></i><h3>Quick Local Delivery</h3><p style="color:var(--muted);font-size:.9rem">Fast delivery across Yamuna Nagar, Nigdi & Pradhikaran.</p></div>
+  </div>
+</section>
+
+<section id="menu" class="alt">
+  <div class="title">
+    <h2>Interactive Menu</h2>
+    <p>Filter by mood and add items directly to your WhatsApp order bag</p>
+  </div>
+  <div class="filters">
+    <button class="f-btn active" onclick="filterMenu('all',this)">All Items</button>
+    <button class="f-btn" onclick="filterMenu('coffee',this)">Signature Coffee</button>
+    <button class="f-btn" onclick="filterMenu('food',this)">Quick Bites</button>
+    <button class="f-btn" onclick="filterMenu('sweet',this)">Sweet Cravings</button>
+  </div>
+  <div class="grid">
+    <div class="card menu-card" data-cat="coffee">
+      <img src="https://unsplash.com" alt="Hazelnut Latte">
+      <div style="display:flex;justify-content:space-between;align-items:center"><h3>Hazelnut Latte</h3><strong style="color:var(--pri)">₹180</strong></div>
+      <span class="tag">100% Veg</span>
+      <p style="color:var(--muted);font-size:.86rem;margin:10px 0 15px">Rich espresso blended with velvety steamed milk and roasted hazelnut.</p>
+      <button class="btn" style="width:100%" onclick="addCart('Hazelnut Latte',180)">+ Add to Cart</button>
+    </div>
+    <div class="card menu-card" data-cat="coffee">
+      <img src="https://unsplash.com" alt="Cold Brew">
+      <div style="display:flex;justify-content:space-between;align-items:center"><h3>Iced Cold Brew</h3><strong style="color:var(--pri)">₹190</strong></div>
+      <span class="tag">Vegan</span>
+      <p style="color:var(--muted);font-size:.86rem;margin:10px 0 15px">18-hour steeped single-origin cold coffee served over crystal ice.</p>
+      <button class="btn" style="width:100%" onclick="addCart('Iced Cold Brew',190)">+ Add to Cart</button>
+    </div>
+    <div class="card menu-card" data-cat="food">
+      <img src="https://unsplash.com" alt="Paneer Panini">
+      <div style="display:flex;justify-content:space-between;align-items:center"><h3>Paneer Pesto Panini</h3><strong style="color:var(--pri)">₹220</strong></div>
+      <span class="tag">100% Veg</span>
+      <p style="color:var(--muted);font-size:.86rem;margin:10px 0 15px">Grilled ciabatta stuffed with basil pesto, mozzarella & cottage cheese.</p>
+      <button class="btn" style="width:100%" onclick="addCart('Paneer Pesto Panini',220)">+ Add to Cart</button>
+    </div>
+    <div class="card menu-card" data-cat="food">
+      <img src="https://unsplash.com" alt="Avocado Toast">
+      <div style="display:flex;justify-content:space-between;align-items:center"><h3>Avocado Toast</h3><strong style="color:var(--pri)">₹260</strong></div>
+      <span class="tag">Healthy & Vegan</span>
+      <p style="color:var(--muted);font-size:.86rem;margin:10px 0 15px">Toasted sourdough topped with smashed Hass avocado & cherry tomatoes.</p>
+      <button class="btn" style="width:100%" onclick="addCart('Avocado Toast',260)">+ Add to Cart</button>
+    </div>
+    <div class="card menu-card" data-cat="sweet">
+      <img src="https://unsplash.com" alt="Chocolate Cake">
+      <div style="display:flex;justify-content:space-between;align-items:center"><h3>Belgian Chocolate Cake</h3><strong style="color:var(--pri)">₹210</strong></div>
+      <span class="tag">100% Eggless</span>
+      <p style="color:var(--muted);font-size:.86rem;margin:10px 0 15px">Warm, gooey dark chocolate truffle ganache layered with moist sponge.</p>
+      <button class="btn" style="width:100%" onclick="addCart('Belgian Chocolate Cake',210)">+ Add to Cart</button>
+    </div>
+    <div class="card menu-card" data-cat="sweet">
+      <img src="https://unsplash.com" alt="Croissant">
+      <div style="display:flex;justify-content:space-between;align-items:center"><h3>Butter Croissant</h3><strong style="color:var(--pri)">₹140</strong></div>
+      <span class="tag">Freshly Baked</span>
+      <p style="color:var(--muted);font-size:.86rem;margin:10px 0 15px">Golden, flaky French croissant served warm with homemade berry jam.</p>
+      <button class="btn" style="width:100%" onclick="addCart('Butter Croissant',140)">+ Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<section id="custom">
+  <div class="title">
+    <h2>Build Your Own Coffee</h2>
+    <p>Customize your cup and add it directly to your ABC Cafe order</p>
+  </div>
+  <div class="card" style="max-width:800px;margin:auto">
+    <div class="grid">
+      <div><label><strong>1. Choose Base</strong></label><select id="c-base" onchange="calcCoffee()"><option value="140">Espresso (₹140)</option><option value="160" selected>Cappuccino (₹160)</option><option value="170">Iced Latte (₹170)</option></select></div>
+      <div><label><strong>2. Select Milk</strong></label><select id="c-milk" onchange="calcCoffee()"><option value="0">Regular Milk (₹0)</option><option value="40">Oat Milk (+₹40)</option><option value="50">Almond Milk (+₹50)</option></select></div>
+      <div><label><strong>3. Flavor Add-on</strong></label><select id="c-add" onchange="calcCoffee()"><option value="0">None (₹0)</option><option value="30">Vanilla (+₹30)</option><option value="35">Caramel (+₹35)</option></select></div>
+    </div>
+    <div style="margin-top:22px;padding:15px;border-radius:12px;background:var(--bg);border:1px dashed var(--pri);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+      <strong id="c-desc">Custom Cappuccino (Regular Milk) — ₹160</strong>
+      <button class="btn" onclick="addCustom()"><i class="fas fa-cart-plus"></i> Add Custom Drink</button>
+    </div>
+  </div>
+</section>
+<section id="events" class="alt">
+  <div class="title">
+    <h2>Events, Reviews & Gift Cards</h2>
+    <p>Loved by Nigdi & PCMC locals (4.9 ★ on Google)</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3><i class="fas fa-calendar-alt" style="color:var(--pri)"></i> Weekend Happenings</h3>
+      <p style="margin:12px 0;font-size:.9rem"><strong>• Friday Live Music:</strong> Acoustic nights from 7:30 PM (Free Entry)</p>
+      <p style="margin-bottom:15px;font-size:.9rem"><strong>• Sunday Latte Art:</strong> Hands-on coffee workshop at 11:00 AM</p>
+      <button class="btn btn-out" onclick="addCart('Sunday Latte Art Pass',399)">Book Workshop (₹399)</button>
+    </div>
+    <div class="card">
+      <h3><i class="fas fa-gift" style="color:var(--pri)"></i> Gift Vouchers & Beans</h3>
+      <p style="margin:12px 0;font-size:.9rem">Gift a coffee date or brew ABC Cafe's signature roasted beans at home.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn" onclick="addCart('₹500 ABC Gift Card',500)">+ ₹500 Gift Card</button>
+        <button class="btn btn-out" onclick="addCart('250g Coffee Beans',420)">+ 250g Beans (₹420)</button>
+      </div>
+    </div>
+    <div class="card">
+      <div style="color:#F59E0B;margin-bottom:8px">★★★★★</div>
+      <p style="font-size:.9rem">"Best cafe near Pavale Ground! Peaceful atmosphere for laptop work, fast Wi-Fi, and amazing Hazelnut Latte."</p>
+      <h4 style="margin-top:12px">— Rohan Kulkarni, Nigdi</h4>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="title">
+    <h2>Reserve Table & Visit ABC Cafe</h2>
+    <p>Book your spot on WhatsApp or get directions to Yamuna Nagar, Nigdi</p>
+  </div>
+  <div class="grid">
+    <form class="card" onsubmit="bookTable(event)">
+      <h3>Instant Table Reservation</h3>
+      <input type="text" id="b-name" placeholder="Your Full Name" required>
+      <input type="datetime-local" id="b-time" required>
+      <select id="b-guests"><option>2 Guests (Casual / Date)</option><option>1 Guest (Work / Solo)</option><option>4-6 Guests (Family)</option><option>10+ Guests (Birthday Party)</option></select>
+      <button type="submit" class="btn" style="width:100%;margin-top:15px;background:#25D366"><i class="fab fa-whatsapp"></i> Confirm via WhatsApp</button>
+    </form>
+    <div class="card">
+      <h3>ABC Cafe Location</h3>
+      <p style="font-size:.88rem;margin:10px 0">📍 <strong>Pavale Ground, Kounteya Housing Society, Yamuna Nagar, Nigdi, Pimpri-Chinchwad, Pune 411044</strong> (MQ7H+W7M)</p>
+      <p style="margin-bottom:10px">📞 <a href="tel:+919623792163" style="color:var(--pri);font-weight:600;text-decoration:none">+91 96237 92163 (Click to Call)</a></p>
+      <iframe src="https://google.com" width="100%" height="150" style="border:0;border-radius:10px"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h3>ABC Cafe • Nigdi, Pune</h3>
+  <p style="font-size:.85rem;margin-top:6px">© 2026 ABC Cafe, Yamuna Nagar, Pune 411044. WhatsApp: +91 96237 92163</p>
+</footer>
+
+<div class="drawer" id="drawer">
+  <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--bdr);padding-bottom:10px">
+    <h3>Your ABC Cafe Order</h3>
+    <button onclick="toggleCart()" style="background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text)">&times;</button>
+  </div>
+  <div id="cart-list" style="flex:1;overflow-y:auto;padding:15px 0">Your cart is empty.</div>
+  <div style="border-top:1px solid var(--bdr);padding-top:10px">
+    <strong id="total-txt">Total: ₹0</strong>
+    <input type="text" id="o-name" placeholder="Your Name">
+    <input type="text" id="o-addr" placeholder="Table No. or Address (Nigdi)">
+    <button class="btn" style="width:100%;margin-top:10px;background:#25D366" onclick="sendWA()"><i class="fab fa-whatsapp"></i> Send Order on WhatsApp</button>
+  </div>
+</div>
+
+<a href="https://wa.me!" target="_blank" class="wa-float"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+const WA="919623792163";
+let cart=[],cPrice=160,cName="Custom Cappuccino (Regular Milk)";
+function toggleTheme(){document.body.dataset.theme=document.body.dataset.theme==="dark"?"":"dark"}
+function toggleCart(){document.getElementById("drawer").classList.toggle("open")}
+function filterMenu(cat,btn){
+  document.querySelectorAll(".f-btn").forEach(b=>b.classList.remove("active"));btn.classList.add("active");
+  document.querySelectorAll(".menu-card").forEach(c=>c.style.display=(cat==="all"||c.dataset.cat===cat)?"block":"none");
+}
+function addCart(n,p){
+  let f=cart.find(i=>i.n===n);f?f.q++:cart.push({n,p,q:1});renderCart();
+}
+function renderCart(){
+  document.getElementById("cnt").innerText=cart.reduce((s,i)=>s+i.q,0);
+  let t=0;
+  document.getElementById("cart-list").innerHTML=cart.length?cart.map((i,idx)=>{
+    t+=i.p*i.q;
+    return `<div style="display:flex;justify-content:space-between;margin-bottom:10px"><span>${i.n} (x${i.q})</span><span>₹${i.p*i.q} <button onclick="cart.splice(${idx},1);renderCart()" style="color:red;border:none;background:none;cursor:pointer">✕</button></span></div>`;
+  }).join(""):"Your cart is empty.";
+  document.getElementById("total-txt").innerText="Total (incl. 5% GST): ₹"+Math.round(t*1.05);
+}
+function calcCoffee(){
+  let b=document.getElementById("c-base"),m=document.getElementById("c-milk"),a=document.getElementById("c-add");
+  cPrice=+b.value+ +m.value+ +a.value;
+  cName=`Custom ${b.options[b.selectedIndex].text.split(" (")} (${m.options[m.selectedIndex].text.split(" (")})`;
+  document.getElementById("c-desc").innerText=`${cName} — ₹${cPrice}`;
+}
+function addCustom(){addCart(cName,cPrice);toggleCart()}
+function sendWA(){
+  let n=document.getElementById("o-name").value,a=document.getElementById("o-addr").value;
+  if(!cart.length||!n||!a)return alert("Please add items and enter Name & Address!");
+  let msg=`*ABC Cafe Order*\nName: ${n}\nLocation: ${a}\n\n`+cart.map(i=>`• ${i.n} x${i.q} = ₹${i.p*i.q}`).join("\n")+`\n\n*${document.getElementById("total-txt").innerText}*`;
+  window.open(`https://wa.me{WA}?text=${encodeURIComponent(msg)}`);
+}
+function bookTable(e){
+  e.preventDefault();
+  let msg=`*Table Booking - ABC Cafe*\nName: ${document.getElementById("b-name").value}\nTime: ${document.getElementById("b-time").value}\nGuests: ${document.getElementById("b-guests").value}`;
+  window.open(`https://wa.me{WA}?text=${encodeURIComponent(msg)}`);
+}
+</script>
 </body>
+</html>
+
 </html>
